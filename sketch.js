@@ -1,4 +1,4 @@
-var dog,sadDog,happyDog, database;
+var dog,sadDog,happyDog,database;
 var foodS,foodStock;
 var fedTime,lastFed;
 var feed,addFood;
@@ -6,11 +6,11 @@ var foodObj;
 var bedroom,garden,washroom,currenttime;
 var readState,changeState;
 function preload(){
-sadDog=loadImage("images/Dog.png");
-happyDog=loadImage("images/happyDog.png");
-bedroom=loadImage("images/Bed Room.png");
-garden = loadImage("images/Garden.png");
-washroom = loadImage("images/Wash Room");
+sadDog=loadImage("Images/Dog.png");
+happyDog=loadImage("Images/happy dog.png");
+garden=loadImage("Images/Garden.png");
+washroom=loadImage("Images/Wash Room.png");
+bedroom=loadImage("Images/Bed Room.png");
 }
 
 function setup() {
@@ -58,7 +58,7 @@ function draw() {
    }else{
      text("Last Feed : "+ lastFed + " AM", 350,30);
    }
-   if (gameState!== "hungry") {
+   if (readState!== "hungry") {
     feed.hide();
     addFood.hide();
     dog.remove();
